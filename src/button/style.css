@@ -1,0 +1,41 @@
+/* Base styles, not related to example */
+body {
+  font: 200% system-ui, Helvetica Neue, Segoe UI, sans-serif;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input[type="number"] {
+  width: 4em;
+}
+button {
+  border-radius: 0.3em;
+  padding: 0.1em 0.5em 0.15em;
+  font-weight: bold;
+  font-size: 180%;
+  margin: 0.2em;
+  cursor: pointer;
+}
+
+/********************************************/
+/* Main CSS */
+button {
+  --_color: var(--color, black);
+  border: 0.1em solid var(--_color);
+  background: transparent;
+  color: var(--_color);
+}
+
+button:hover {
+  background: var(--_color);
+  color: white;
+}
+
+button.pink {
+  --color: #f06;
+}

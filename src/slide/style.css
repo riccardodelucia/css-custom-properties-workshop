@@ -1,0 +1,17 @@
+@property --color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightblue;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.slide {
+  --color: gold;
+  --color: lch(60% 100 0);
+  background: var(--color);
+  min-height: 100vh;
+}
