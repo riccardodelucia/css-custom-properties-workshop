@@ -1,0 +1,40 @@
+body {
+  display: grid;
+  --gutter: 0.3em;
+  gap: var(--gutter);
+  font-size: calc(90% * var(--font-size-scale, 1));
+}
+
+section {
+  background: silver;
+  padding: calc(0.6em + var(--gutter) * 2);
+}
+
+section:nth-of-type(3n + 4) {
+  background-color: #f06;
+  color: hsl(0 0% 100% /0.6);
+}
+
+section:nth-last-of-type(2) {
+  background-color: orange;
+}
+
+@media (min-width: 600px) {
+  body {
+    --gutter: 0.5em;
+    --font-size-scale: 1.2;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section {
+    padding: 1.6em;
+  }
+
+  section:nth-of-type(3n + 4) {
+    grid-column-end: span 3;
+  }
+
+  section:nth-last-of-type(2) {
+    grid-column-end: span 2;
+  }
+}

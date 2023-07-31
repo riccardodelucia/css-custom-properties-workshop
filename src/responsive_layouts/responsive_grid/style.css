@@ -1,0 +1,31 @@
+body {
+  display: grid;
+  --gutter: 0.3em;
+  gap: var(--gutter);
+  font-size: calc(90% * var(--font-size-scale, 1));
+  grid-template-columns: repeat(var(--columns, 1), 1fr);
+}
+
+section {
+  background: silver;
+  padding: calc(0.6em + var(--gutter) * 2);
+}
+
+section:nth-of-type(3n + 4) {
+  background-color: #f06;
+  color: hsl(0 0% 100% /0.6);
+  grid-column-end: span var(--columns);
+}
+
+section:nth-last-of-type(2) {
+  background-color: orange;
+  grid-column-end: span calc(var(--columns) - 1);
+}
+
+@media (min-width: 600px) {
+  body {
+    --gutter: 0.5em;
+    --font-size-scale: 1.2;
+    --columns: 3;
+  }
+}

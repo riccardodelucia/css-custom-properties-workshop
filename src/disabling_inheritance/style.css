@@ -1,0 +1,10 @@
+* {
+  --corner-size: initial; /* this disables inheritance for all contexts (i.e. HTML tags) */
+  clip-path: polygon(calc(100% - var(--corner-size)) 0, 100% var(--corner-size), 100% 100%, 0 100%, 0 0);
+}
+
+p {
+  padding: 1em;
+  background: skyblue;
+  --corner-size: 1em; /* this variabile initialization is valid for <p> only, not for its children!*/
+}
