@@ -1,0 +1,19 @@
+:root {
+  --border: var(--border-thickness, 3px) var(--border-type, solid) var(--border-color, black);
+}
+
+* {
+  --border-2: var(--border-thickness, 3px) var(--border-type, solid) var(--border-color, black);
+}
+
+.card {
+  border: var(--border);
+  padding: 1em 2em;
+  margin-bottom: 2rem;
+}
+
+.card-2 {
+  border: var(--border-2);
+  padding: 1em 2em;
+  margin-bottom: 2rem;
+}
